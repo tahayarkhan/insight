@@ -10,7 +10,7 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(true)
   const [submitSuccess, setSubmitSuccess] = useState(false)
 
-  const apiUrl = process.env.VITE_API_URL;
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault()

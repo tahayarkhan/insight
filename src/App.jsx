@@ -11,6 +11,7 @@ function App() {
   const [submitSuccess, setSubmitSuccess] = useState(false)
 
   const apiUrl = import.meta.env.VITE_API_URL;
+  console.log(apiUrl)
 
   const handleSubmit = async (e) => {
     e.preventDefault()

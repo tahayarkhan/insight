@@ -10,6 +10,8 @@ function App() {
   const [isDarkMode, setIsDarkMode] = useState(true)
   const [submitSuccess, setSubmitSuccess] = useState(false)
 
+  const apiUrl = process.env.API_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!input.trim()) return
@@ -21,7 +23,7 @@ function App() {
     setInput('')
 
     try {
-      const res = await axios.post('http://localhost:5000/api/chat', { prompt: input })
+      const res = await axios.post(apiUrl, { prompt: input })
       const aiMessage = { sender: 'ai', text: res.data.reply }
       setMessages(prev => [...prev, aiMessage])
       setSubmitSuccess(true)

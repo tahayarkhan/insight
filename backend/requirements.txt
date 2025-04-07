@@ -5,3 +5,4 @@ cohere==4.3.1
 requests==2.32.3
 pandas==2.2.3
 numpy==1.26.4
+jinja2==2.11.3
